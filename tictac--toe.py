@@ -63,32 +63,36 @@ def allocation_of_first_input():
 # In[4]:
 
 
-
+positions=["1","2","3","4","5","6","7","8","9"]
 def comparison():
     if board[0]==board[1]==board[2]:
         print("{} is winner".format(board[0]))
         return 1
+        
     elif board[3]==board[4]==board[5]:
         print("{} is winner".format(board[3]))
         return 1
     elif board[6]==board[7]==board[8]:
         print("{} is winner".format(board[6]))
-        return 1
+        return 1 
     elif board[0]==board[3]==board[6]:
         print("{} is winner".format(board[0]))
-        return 1
+        return 1 
     elif board[1]==board[4]==board[7]:
         print("{} is winner".format(board[1]))
-        return 1
+        return 1 
     elif board[2]==board[5]==board[8]:
         print("{} is winner".format(board[2]))
-        return 1
+        return 1 
     elif board[0]==board[4]==board[8]:
         print("{} is winner".format(board[0]))
-        return 1
+        return 1 
     elif board[6]==board[4]==board[2]:
         print("{} is winner".format(board[6]))
-        return 1
+        return 1 
+    elif len(positions)==0:
+        print("tie")
+        return 0 
     else:
         return 0
         
@@ -102,7 +106,7 @@ def input_position():
     condition=0
     while condition==0: 
         raw_input=""
-        positions=["1","2","3","4","5","6","7","8","9"]
+        
         while raw_input not in positions:
             display(board)
             print("{} enter your position".format(first_placeholder))
@@ -114,7 +118,7 @@ def input_position():
         condition=comparison()
         if condition==1:
             break
-       
+        
         while raw_input not in positions:
             display(board)
             print("{} enter your position".format(second_placeholder))
@@ -143,6 +147,18 @@ while y==[]:
         y=input()
 display(board)
 input_position()
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
 
 
 
